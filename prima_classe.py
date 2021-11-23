@@ -3,7 +3,11 @@ class CSVFile():
     self.name = name
     self.file = file
   
-  def get_data(self):
+  def __str__(self):
+    return ('Questo è il file {} e si chiama {}.'.format(self.file,self.name))
+  
+  def get_data(self):  # questa è definita sul modello di 
+                       #shampoo_sales.cvs, su questo mi restituisce i valori.
     f = open(self.file)
     a = []
     for i in f:
@@ -17,5 +21,6 @@ class CSVFile():
     return a
 
 shampoo = CSVFile('shampoo_sales.csv', 'shampoo')
-str(shampoo)
+(str(shampoo))
 print(shampoo.get_data())
+print(str(shampoo))
