@@ -27,7 +27,7 @@ class NumericalCSVFile (CSVFile):
   def __init__(self, file, name):
     self.name = name
     self.file = file
-    self.fattura = self.fai_2()
+    self.fattura = self.converti_in_numeri()
 
   def fai(self):  # converte gli elementi di tutte colonne tranne la prima in floating point, ovvero in numeri
     cestino = self.get_data()
@@ -41,7 +41,7 @@ class NumericalCSVFile (CSVFile):
 
     return cestino
 
-  def fai_2(self):  # converte gli elementi di tutte colonne tranne la prima in floating point, ovvero in numeri
+  def converti_in_numeri(self):  # converte gli elementi di tutte colonne tranne la prima in floating point, ovvero in numeri
     cestino = self.get_data()
     i = 0
     while i < len(cestino):
@@ -63,5 +63,7 @@ shampoo = NumericalCSVFile('shampoo_sales.csv', 'shampoo')
 #print(shampoo.get_data())
 #print(str(shampoo))
 
-#print(shampoo.fai()[1][1]*shampoo.fai()[5][1])
+#print(shampoo.converti_in_numeri()[1][1]*shampoo.converti_in_numeri()[5][1])
 print(shampoo.fattura)
+
+print(shampoo.converti_in_numeri())
