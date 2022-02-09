@@ -58,12 +58,27 @@ class NumericalCSVFile (CSVFile):
     return cestino
 
 
-shampoo = NumericalCSVFile('shampoo_sales.csv', 'shampoo')
+#shampoo = NumericalCSVFile('shampoo_sales.csv', 'shampoo')
 #(str(shampoo))
 #print(shampoo.get_data())
 #print(str(shampoo))
 
 #print(shampoo.converti_in_numeri()[1][1]*shampoo.converti_in_numeri()[5][1])
-print(shampoo.fattura)
+#print(shampoo.fattura)
 
-print(shampoo.converti_in_numeri())
+#print(shampoo.converti_in_numeri())
+
+def lista_completa(series):
+    lista = []
+    for element in series:
+        lista.append(element)
+    for item in lista:
+        item[0] = item[0].split('-')
+    return lista
+
+A = [['1949-01', 112], ['1949-02', 118], ['1949-03', 132], ['1949-04', 132], ['1949-05', 132], ['1949-06', 132], ['1949-07', 132], ['1949-08', 132], ['1949-09', 132], ['1949-10', 132], ['1949-11', 132], ['1949-12', 132], ['1950-01', 115], ['1950-02', 126], ['1950-03', 141], ['1950-04', 141], ['1950-05', 141], ['1950-06', 141], ['1950-07', 141], ['1950-08', 141], ['1950-09', 141], ['1950-10', 141], ['1950-11', 141], ['1950-12', 141], ['1951-01', 145], ['1951-02', 150], ['1951-03', 178], ['1951-04', 178], ['1951-05', 178], ['1951-06', 178], ['1951-07', 178], ['1951-08', 178], ['1951-09', 178], ['1951-10', 178], ['1951-11', 178], ['1951-12', 178]]
+b = A
+print(A)
+print(lista_completa(A))
+print(A)
+print(b)

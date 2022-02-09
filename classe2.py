@@ -10,10 +10,10 @@ class CSVFile():
     return ('Questo è il file {} e si chiama {}.'.format(self.file,self.name))
   
   def contarighe(self):
-  numero = 0
-  for i in self.file:
-    numero += 1
-  return numero
+    numero = 0
+    for i in self.file:
+      numero += 1
+    return numero
   
   def get_data(self, start = None, end = None):  # questa è definita sul modello di 
                        # shampoo_sales.cvs, su questo mi restituisce i valori.
@@ -94,11 +94,11 @@ class NumericalCSVFile (CSVFile):
 
 
 shampoo = NumericalCSVFile('shampoo_sales.csv', 'shampoo')
-#(str(shampoo))
-#print(shampoo.get_data())
-#print(str(shampoo))
+(str(shampoo))
+print(shampoo.get_data())
+print(str(shampoo))
 
-#print(shampoo.fai()[1][1]*shampoo.fai()[5][1])
+print(shampoo.fai()[1][1]*shampoo.fai()[5][1])
 print(shampoo.fattura)
 
 def contarighe(file):
