@@ -133,7 +133,6 @@ def amico(data):
                 del(data[indice]) # posso eliminare k perchè non ha dati utili
     return data
 
-# QUESTA FUNZIONE SERVE ALL'INTERNO DI compute_avg_monthly_difference(series,first,last)
 
 def sostegno(series,first,last,diff):
     # scopo di questa funzione è:
