@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 class ExamException(Exception):
     pass
 
@@ -277,11 +276,9 @@ def compute_avg_monthly_difference(series,first,last): # calcola la variazione m
     
     return ris
 
-
 #mia_file = CSVTimeSeriesFile(name='sub.csv')
 #print('Nome del file: "{}"'.format(mia_file.name))
 #S = (mia_file.get_data())
-
 #print(S)
 #s = (compute_avg_monthly_difference(S,'1951','1949'))
 #print(s)
